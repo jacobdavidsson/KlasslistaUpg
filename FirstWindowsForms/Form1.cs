@@ -15,6 +15,7 @@ namespace FirstWindowsForms
     {
 
         MySqlConnection conn;
+        
         // Lyft ut listan så den blir global och kan nås överallt
         List<Elev> elever = new List<Elev>();
 
@@ -25,31 +26,36 @@ namespace FirstWindowsForms
 
             string server = "localhost";
             string database = "elever";
+            //kolla rätt användarnamn och lösenord
             string user = "root";            
-            string pass = "3124";       // kolla rätt lösen
+            string pass = "3124";
 
             string connString  = $"SERVER={server}; DATABASE = {database}; UID={user}; PASSWORD={pass};";
 
             conn = new MySqlConnection(connString);
         }
 
+        //Knapp som sparar ny användare och hämtar ny lista
         private void BtnSave_Click(object sender, EventArgs e)
         {
             insertIntoList();
             refreshList();
         }
 
+        //Hämtar lista
         private void BtnGetData_click(object sender, EventArgs e)
         {
             refreshList();
         }
 
+        //Tar bort användare och uppdaterar lista
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             deleteUser();
             refreshList();
         }
 
+        //Uppdaterar användare och lista
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
 
@@ -57,6 +63,7 @@ namespace FirstWindowsForms
             refreshList();
         }
 
+        //Hämtar data från databas och visar i en lista
         private void refreshList()
         {
             // Töm listan
@@ -73,14 +80,13 @@ namespace FirstWindowsForms
             lblName.Text = "Namn";
             lblAge.Text = "Ålder";
 
-            // öppnar koppling till db igen
+            // öppnar koppling till db
             conn.Open();
 
             // exekvera kommando till db
             MySqlDataReader reader = cmd.ExecuteReader();
 
             // använder while loop för att läsa varje rad 
-
             // Spara ner data från databasen till listan elever
             while (reader.Read())
             {
@@ -98,8 +104,10 @@ namespace FirstWindowsForms
             conn.Close();
         }
 
+        //Lägger till data till databas
         private void insertIntoList()
-        {
+        {  
+            //try catch för att programmet inte ska krascha
             try
             {
                 // hämta text från textfält
@@ -126,18 +134,22 @@ namespace FirstWindowsForms
             }
             catch (Exception e)
             {
+                //Felmeddelande
                 MessageBox.Show("Wrong input\nName can only contain letters\nAge can only contain numbers");
             }
             finally
             {
+                //Rensar bort all input från textfält vid knapptryck
                 TxtBox.Clear();
                 TxtName.Clear();
                 TxtAge.Clear();
             }
         }
 
+        //Tar bort användare från databas
         private void deleteUser()
         {
+            //try catch för att programmet inte ska krascha
             try
             {
                 // hämta text från textfält
@@ -166,18 +178,22 @@ namespace FirstWindowsForms
             }
             catch (Exception e)
             {
+                //felmeddelande
                 MessageBox.Show("Insert correct ID to delete user");
             }
             finally
             {
+                //rensar textfält
                 TxtBox.Clear();
                 TxtName.Clear();
                 TxtAge.Clear();
             }
         }
 
+        //Uppdaterar användare i databas
         private void updateUser()
         {
+            //try catch för att programmet inte ska krascha
             try
             {
                 // hämta text från textfält
@@ -207,10 +223,12 @@ namespace FirstWindowsForms
             }
             catch (Exception e)
             {
+                //felmeddelande
                 MessageBox.Show("Could not update user\nInsert ID you want to update and new name and age");
             }
             finally
             {
+                //rensat textfält
                 TxtBox.Clear();
                 TxtName.Clear();
                 TxtAge.Clear();
