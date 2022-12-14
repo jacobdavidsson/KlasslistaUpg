@@ -70,7 +70,7 @@ namespace FirstWindowsForms
             elever.Clear();
 
             // skriva sql statment
-            string strsql = $"SELECT * FROM elever1";
+            string strsql = $"SELECT * FROM elev_view2";
 
             // skapa mysql command objekt
             MySqlCommand cmd = new MySqlCommand(strsql, conn);
@@ -79,9 +79,10 @@ namespace FirstWindowsForms
             lblID.Text = "ID";
             lblName.Text = "Namn";
             lblAge.Text = "Ålder";
+            lblGrade.Text = "Betyg";
 
             // öppnar koppling till db
-            conn.Open();
+            conn.Open();    
 
             // exekvera kommando till db
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -90,7 +91,7 @@ namespace FirstWindowsForms
             // Spara ner data från databasen till listan elever
             while (reader.Read())
             {
-                elever.Add(new Elev(Convert.ToInt32(reader["elever1_id"]), reader["elever1_name"].ToString(), Convert.ToInt32(reader["elever1_age"].ToString())));
+                elever.Add(new Elev(Convert.ToInt32(reader["elever1_id"]), reader["elever1_name"].ToString(), Convert.ToInt32(reader["elever1_age"].ToString()), Convert.ToInt32(reader["Primaryschool_grade"].ToString())));
             }
             // printar ut listan med id.nr från listan elever. 
             for (int i = 0; i < elever.Count; i++)
@@ -98,6 +99,7 @@ namespace FirstWindowsForms
                 lblID.Text += Environment.NewLine + (i + 1);
                 lblName.Text += Environment.NewLine + elever[i].Name;
                 lblAge.Text += Environment.NewLine + elever[i].Age;
+                lblGrade.Text += Environment.NewLine + elever[i].Grade;
             }
 
             // stäng koppling
@@ -113,9 +115,10 @@ namespace FirstWindowsForms
                 // hämta text från textfält
                 string strName = TxtName.Text;
                 int intAge = Convert.ToInt32(TxtAge.Text);
+                int intGrade = Convert.ToInt32(TxtGrade.Text);
 
                 // skriv SQL insert statment
-                string strSql = $"INSERT INTO elever1(elever1_name, elever1_age) VALUES ('{strName}', {intAge})";
+                string strSql = $"INSERT INTO elever1(elever1_name, elever1_age, Primaryschool_Primaryschool_id) VALUES ('{strName}', {intAge}, {intGrade})";
 
                 // skapa en mysqlcommand objekt
                 MySqlCommand cmd = new MySqlCommand(strSql, conn);
@@ -143,6 +146,7 @@ namespace FirstWindowsForms
                 TxtBox.Clear();
                 TxtName.Clear();
                 TxtAge.Clear();
+                TxtGrade.Clear();
             }
         }
 
@@ -187,6 +191,7 @@ namespace FirstWindowsForms
                 TxtBox.Clear();
                 TxtName.Clear();
                 TxtAge.Clear();
+                TxtGrade.Clear();
             }
         }
 
@@ -202,9 +207,10 @@ namespace FirstWindowsForms
                 int id = elever[i - 1].Id;
                 string strName = TxtName.Text;
                 int intAge = Convert.ToInt32(TxtAge.Text);
+                int intGrade = Convert.ToInt32(TxtGrade.Text);
 
                 // skriv SQL delete statment
-                string strSql = $"UPDATE elever1 SET elever1_name = '{strName}', elever1_age = {intAge} WHERE elever1_id = ({id})";
+                string strSql = $"UPDATE elever1 SET elever1_name = '{strName}', elever1_age = {intAge}, Primaryschool_Primaryschool_id = {intGrade} WHERE elever1_id = ({id})";
 
                 // skapa en mysqlcommand objekt
                 MySqlCommand cmd = new MySqlCommand(strSql, conn);
@@ -232,6 +238,7 @@ namespace FirstWindowsForms
                 TxtBox.Clear();
                 TxtName.Clear();
                 TxtAge.Clear();
+                TxtGrade.Clear();
             }
         }
 
