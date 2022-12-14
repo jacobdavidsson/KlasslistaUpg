@@ -49,8 +49,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(469, 342);
-            this.BtnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSave.Location = new System.Drawing.Point(352, 305);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(219, 68);
             this.BtnSave.TabIndex = 0;
@@ -98,8 +97,7 @@
             // 
             // BtnGetData
             // 
-            this.BtnGetData.Location = new System.Drawing.Point(469, 418);
-            this.BtnGetData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGetData.Location = new System.Drawing.Point(352, 375);
             this.BtnGetData.Name = "BtnGetData";
             this.BtnGetData.Size = new System.Drawing.Size(219, 68);
             this.BtnGetData.TabIndex = 0;
@@ -111,8 +109,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(481, 539);
-            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblID.Location = new System.Drawing.Point(350, 451);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(58, 44);
             this.lblID.TabIndex = 6;
@@ -122,8 +119,7 @@
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(848, 539);
-            this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAge.Location = new System.Drawing.Point(558, 451);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(113, 44);
             this.lblAge.TabIndex = 6;
@@ -133,8 +129,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(636, 539);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(423, 451);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(125, 44);
             this.lblName.TabIndex = 6;
@@ -142,8 +137,7 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(736, 342);
-            this.BtnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnDelete.Location = new System.Drawing.Point(552, 305);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(219, 68);
             this.BtnDelete.TabIndex = 0;
@@ -153,8 +147,7 @@
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(736, 418);
-            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnUpdate.Location = new System.Drawing.Point(552, 375);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(219, 68);
             this.BtnUpdate.TabIndex = 0;
@@ -195,33 +188,35 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1017, 106);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(347, 252);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 25);
+            this.label4.Size = new System.Drawing.Size(79, 29);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Årskurs";
+            this.label4.Text = "Betyg";
             // 
             // TxtGrade
             // 
-            this.TxtGrade.Location = new System.Drawing.Point(1135, 105);
+            this.TxtGrade.Location = new System.Drawing.Point(478, 255);
             this.TxtGrade.Name = "TxtGrade";
-            this.TxtGrade.Size = new System.Drawing.Size(270, 31);
+            this.TxtGrade.Size = new System.Drawing.Size(156, 26);
             this.TxtGrade.TabIndex = 9;
             // 
             // lblGrade
             // 
             this.lblGrade.AutoSize = true;
-            this.lblGrade.Location = new System.Drawing.Point(1010, 548);
+            this.lblGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrade.Location = new System.Drawing.Point(672, 451);
             this.lblGrade.Name = "lblGrade";
-            this.lblGrade.Size = new System.Drawing.Size(85, 25);
+            this.lblGrade.Size = new System.Drawing.Size(92, 32);
             this.lblGrade.TabIndex = 10;
-            this.lblGrade.Text = "Årskurs";
+            this.lblGrade.Text = "Betyg";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1588, 974);
+            this.ClientSize = new System.Drawing.Size(1191, 779);
             this.Controls.Add(this.lblGrade);
             this.Controls.Add(this.TxtGrade);
             this.Controls.Add(this.label4);
