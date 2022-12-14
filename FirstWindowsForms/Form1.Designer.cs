@@ -42,13 +42,17 @@
             this.TxtBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtTitle = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtGrade = new System.Windows.Forms.TextBox();
+            this.lblGrade = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(352, 274);
+            this.BtnSave.Location = new System.Drawing.Point(469, 342);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(164, 54);
+            this.BtnSave.Size = new System.Drawing.Size(219, 68);
             this.BtnSave.TabIndex = 0;
             this.BtnSave.Text = "Spara i Databas";
             this.BtnSave.UseVisualStyleBackColor = true;
@@ -58,9 +62,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(347, 198);
+            this.label2.Location = new System.Drawing.Point(463, 248);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 29);
+            this.label2.Size = new System.Drawing.Size(97, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ålder";
             // 
@@ -68,31 +73,35 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(347, 139);
+            this.label3.Location = new System.Drawing.Point(463, 174);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 29);
+            this.label3.Size = new System.Drawing.Size(108, 37);
             this.label3.TabIndex = 3;
             this.label3.Text = "Namn";
             // 
             // TxtName
             // 
-            this.TxtName.Location = new System.Drawing.Point(478, 143);
+            this.TxtName.Location = new System.Drawing.Point(637, 179);
+            this.TxtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(156, 26);
+            this.TxtName.Size = new System.Drawing.Size(207, 31);
             this.TxtName.TabIndex = 4;
             // 
             // TxtAge
             // 
-            this.TxtAge.Location = new System.Drawing.Point(478, 202);
+            this.TxtAge.Location = new System.Drawing.Point(637, 252);
+            this.TxtAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtAge.Name = "TxtAge";
-            this.TxtAge.Size = new System.Drawing.Size(156, 26);
+            this.TxtAge.Size = new System.Drawing.Size(207, 31);
             this.TxtAge.TabIndex = 5;
             // 
             // BtnGetData
             // 
-            this.BtnGetData.Location = new System.Drawing.Point(352, 334);
+            this.BtnGetData.Location = new System.Drawing.Point(469, 418);
+            this.BtnGetData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGetData.Name = "BtnGetData";
-            this.BtnGetData.Size = new System.Drawing.Size(164, 54);
+            this.BtnGetData.Size = new System.Drawing.Size(219, 68);
             this.BtnGetData.TabIndex = 0;
             this.BtnGetData.Text = "Hämta Data";
             this.BtnGetData.UseVisualStyleBackColor = true;
@@ -102,9 +111,10 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(361, 431);
+            this.lblID.Location = new System.Drawing.Point(481, 539);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(43, 32);
+            this.lblID.Size = new System.Drawing.Size(58, 44);
             this.lblID.TabIndex = 6;
             this.lblID.Text = "ID";
             // 
@@ -112,9 +122,10 @@
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(636, 431);
+            this.lblAge.Location = new System.Drawing.Point(848, 539);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(86, 32);
+            this.lblAge.Size = new System.Drawing.Size(113, 44);
             this.lblAge.TabIndex = 6;
             this.lblAge.Text = "Ålder";
             // 
@@ -122,17 +133,19 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(477, 431);
+            this.lblName.Location = new System.Drawing.Point(636, 539);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(93, 32);
+            this.lblName.Size = new System.Drawing.Size(125, 44);
             this.lblName.TabIndex = 6;
             this.lblName.Text = "Namn";
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(552, 274);
+            this.BtnDelete.Location = new System.Drawing.Point(736, 342);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(164, 54);
+            this.BtnDelete.Size = new System.Drawing.Size(219, 68);
             this.BtnDelete.TabIndex = 0;
             this.BtnDelete.Text = "Radera";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -140,9 +153,10 @@
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(552, 334);
+            this.BtnUpdate.Location = new System.Drawing.Point(736, 418);
+            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(164, 54);
+            this.BtnUpdate.Size = new System.Drawing.Size(219, 68);
             this.BtnUpdate.TabIndex = 0;
             this.BtnUpdate.Text = "Uppdatera";
             this.BtnUpdate.UseVisualStyleBackColor = true;
@@ -150,18 +164,20 @@
             // 
             // TxtBox
             // 
-            this.TxtBox.Location = new System.Drawing.Point(478, 85);
+            this.TxtBox.Location = new System.Drawing.Point(637, 106);
+            this.TxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtBox.Name = "TxtBox";
-            this.TxtBox.Size = new System.Drawing.Size(156, 26);
+            this.TxtBox.Size = new System.Drawing.Size(207, 31);
             this.TxtBox.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(347, 81);
+            this.label1.Location = new System.Drawing.Point(463, 101);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 29);
+            this.label1.Size = new System.Drawing.Size(50, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "ID";
             // 
@@ -169,17 +185,46 @@
             // 
             this.TxtTitle.AutoSize = true;
             this.TxtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTitle.Location = new System.Drawing.Point(436, 20);
+            this.TxtTitle.Location = new System.Drawing.Point(581, 25);
+            this.TxtTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TxtTitle.Name = "TxtTitle";
-            this.TxtTitle.Size = new System.Drawing.Size(198, 46);
+            this.TxtTitle.Size = new System.Drawing.Size(268, 63);
             this.TxtTitle.TabIndex = 7;
             this.TxtTitle.Text = "Klasslista";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1017, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 25);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Årskurs";
+            // 
+            // TxtGrade
+            // 
+            this.TxtGrade.Location = new System.Drawing.Point(1135, 105);
+            this.TxtGrade.Name = "TxtGrade";
+            this.TxtGrade.Size = new System.Drawing.Size(270, 31);
+            this.TxtGrade.TabIndex = 9;
+            // 
+            // lblGrade
+            // 
+            this.lblGrade.AutoSize = true;
+            this.lblGrade.Location = new System.Drawing.Point(1010, 548);
+            this.lblGrade.Name = "lblGrade";
+            this.lblGrade.Size = new System.Drawing.Size(85, 25);
+            this.lblGrade.TabIndex = 10;
+            this.lblGrade.Text = "Årskurs";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1191, 779);
+            this.ClientSize = new System.Drawing.Size(1588, 974);
+            this.Controls.Add(this.lblGrade);
+            this.Controls.Add(this.TxtGrade);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.TxtTitle);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblAge);
@@ -194,6 +239,7 @@
             this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnSave);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -218,6 +264,9 @@
         private System.Windows.Forms.TextBox TxtBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TxtTitle;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TxtGrade;
+        private System.Windows.Forms.Label lblGrade;
     }
 }
 

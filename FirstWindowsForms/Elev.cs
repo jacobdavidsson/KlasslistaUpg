@@ -11,19 +11,17 @@ namespace FirstWindowsForms
         public int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
+        public int Grade { get; set; }  
 
-        //Statisk lista
-        //public static List<Elever> elever = new List<Elever>();
+   
 
         //Konstruktor
-        public Elev(int id, string name, int age)
+        public Elev(int id, string name, int age, int grade)
         {
             this.Id = id;
             this.Name = name;
             this.Age = age;
-
-            //Add THIS objekt to list
-            //elever.Add(this);
+            this.Grade = grade;
 
         }
     }
