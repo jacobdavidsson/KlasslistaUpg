@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FirstWindowsForms
@@ -28,7 +22,7 @@ namespace FirstWindowsForms
             string database = "elever";
             //kolla rätt användarnamn och lösenord
             string user = "root";            
-            string pass = "3124";
+            string pass = "EmmaWindows";       // kolla rätt lösen
 
             string connString  = $"SERVER={server}; DATABASE = {database}; UID={user}; PASSWORD={pass};";
 
@@ -65,12 +59,12 @@ namespace FirstWindowsForms
 
         //Hämtar data från databas och visar i en lista
         private void refreshList()
-        {
+        {  
             // Töm listan
             elever.Clear();
 
             // skriva sql statment
-            string strsql = $"SELECT * FROM elev_view2";
+            string strsql = $"SELECT * FROM elev_view2;"; // hämta från view istället
 
             // skapa mysql command objekt
             MySqlCommand cmd = new MySqlCommand(strsql, conn);
@@ -87,11 +81,14 @@ namespace FirstWindowsForms
             // exekvera kommando till db
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            // använder while loop för att läsa varje rad 
             // Spara ner data från databasen till listan elever
             while (reader.Read())
             {
-                elever.Add(new Elev(Convert.ToInt32(reader["elever1_id"]), reader["elever1_name"].ToString(), Convert.ToInt32(reader["elever1_age"].ToString()), Convert.ToInt32(reader["Primaryschool_grade"].ToString())));
+                elever.Add(new Elev(
+                    Convert.ToInt32(reader["elever1_id"]),
+                    reader["elever1_name"].ToString(),
+                    Convert.ToInt32(reader["elever1_age"].ToString()), 
+                    Convert.ToInt32(reader["Primaryschool_grade"].ToString())));
             }
             // printar ut listan med id.nr från listan elever. 
             for (int i = 0; i < elever.Count; i++)
@@ -104,6 +101,10 @@ namespace FirstWindowsForms
 
             // stäng koppling
             conn.Close();
+
+ 
+
+
         }
 
         //Lägger till data till databas
@@ -116,6 +117,13 @@ namespace FirstWindowsForms
                 string strName = TxtName.Text;
                 int intAge = Convert.ToInt32(TxtAge.Text);
                 int intGrade = Convert.ToInt32(TxtGrade.Text);
+
+                if (intGrade > 3 || intGrade < 1)
+                {
+                    intGrade = 1;
+                    MessageBox.Show("Årskurs sattes till 1\nUppdatera till 1-3");
+
+                }
 
                 // skriv SQL insert statment
                 string strSql = $"INSERT INTO elever1(elever1_name, elever1_age, Primaryschool_Primaryschool_id) VALUES ('{strName}', {intAge}, {intGrade})";
@@ -150,7 +158,7 @@ namespace FirstWindowsForms
             }
         }
 
-        //Tar bort användare från databas
+    
         private void deleteUser()
         {
             //try catch för att programmet inte ska krascha
@@ -208,6 +216,13 @@ namespace FirstWindowsForms
                 string strName = TxtName.Text;
                 int intAge = Convert.ToInt32(TxtAge.Text);
                 int intGrade = Convert.ToInt32(TxtGrade.Text);
+
+                if (intGrade > 3 || intGrade < 1)
+                {
+                    intGrade = 1;
+                    MessageBox.Show("Årskurs sattes till 1\nUppdatera till 1-3");
+
+                }
 
                 // skriv SQL delete statment
                 string strSql = $"UPDATE elever1 SET elever1_name = '{strName}', elever1_age = {intAge}, Primaryschool_Primaryschool_id = {intGrade} WHERE elever1_id = ({id})";
