@@ -79,7 +79,7 @@ namespace FirstWindowsForms
             lblID.Text = "ID";
             lblName.Text = "Namn";
             lblAge.Text = "Ålder";
-            lblGrade.Text = "Betyg";
+            lblGrade.Text = "Årskurs";
 
             // öppnar koppling till db
             conn.Open();    
@@ -138,7 +138,7 @@ namespace FirstWindowsForms
             catch (Exception e)
             {
                 //Felmeddelande
-                MessageBox.Show("Wrong input\nName can only contain letters\nAge can only contain numbers");
+                MessageBox.Show("Wrong input\nName can only contain letters\nAge can only contain numbers\nGrade 1-5");
             }
             finally
             {
@@ -230,7 +230,7 @@ namespace FirstWindowsForms
             catch (Exception e)
             {
                 //felmeddelande
-                MessageBox.Show("Could not update user\nInsert ID you want to update and new name and age");
+                MessageBox.Show("Could not update user\nInsert ID you want to update and new name, age and grade");
             }
             finally
             {

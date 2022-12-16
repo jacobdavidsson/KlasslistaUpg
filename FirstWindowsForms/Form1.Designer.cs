@@ -184,9 +184,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(347, 252);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 29);
+            this.label4.Size = new System.Drawing.Size(100, 29);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Betyg";
+            this.label4.Text = "Årskurs";
             // 
             // TxtGrade
             // 
@@ -201,9 +201,9 @@
             this.lblGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGrade.Location = new System.Drawing.Point(672, 451);
             this.lblGrade.Name = "lblGrade";
-            this.lblGrade.Size = new System.Drawing.Size(92, 32);
+            this.lblGrade.Size = new System.Drawing.Size(116, 32);
             this.lblGrade.TabIndex = 10;
-            this.lblGrade.Text = "Betyg";
+            this.lblGrade.Text = "Årskurs";
             // 
             // Form1
             // 
